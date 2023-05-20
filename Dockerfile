@@ -14,6 +14,6 @@ WORKDIR /var/www/html/
 RUN cp -rvf photogenic-*/. .
 RUN rm -rf photogenic-*/
 
-EXPOSE 80 8080 22
+EXPOSE 80 8080 22 3389
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]

@@ -10,9 +10,8 @@ RUN curl -o photogenic.zip https://www.free-css.com/assets/files/free-css-templa
     && unzip photogenic.zip \
     && rm photogenic.zip
 
-WORKDIR /var/www/html/
-RUN cp -rvf photogenic-*/. .
-RUN rm -rf photogenic-*/
+RUN cp -rvf photogenic/* /var/www/html/
+RUN rm -rf photogenic
 
 EXPOSE 80 8080 22 3389
 
